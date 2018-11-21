@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-lg-8 border border-dark rounded justify-content-center m-4">
+        <form class="m-3" action="/survey" method="post">
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label for="name"><h5>Your Name:</h5></label>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label for="location"><h5>Dojo Location:</h5></label>
+                </div>
+                <div class="col-4">
+                    <select class="custom-select" id="location" name="location">
+                        <option selected>San Jose</option>
+                        <option value="McClean">McLean</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Seattle">Seattle</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label for="language"><h5>Favorite Language:</h5></label>
+                </div>
+                <div class="col-4">
+                    <select class="custom-select" id="langauge" name="language">
+                        <option selected>Python</option>
+                        <option value="C#">C#</option>
+                        <option value="MEAN">MEAN</option>
+                        <option value="SWIFT">Swift</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-10 ml-5">
+                    <label for="comment"><h5>Comment (Optional):</h5></label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-10 ml-5 align-self-start">
+                    <textarea class="w-100" id="comment" name="comment" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row justify-content-end">
+                <div class="col-lg-3">
+                    <button type="submit" class="btn btn-primary text-right pl-4 pr-4">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
