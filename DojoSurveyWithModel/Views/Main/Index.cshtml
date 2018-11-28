@@ -1,0 +1,62 @@
+<!-- Added model and validations -->
+
+@model Survey
+<div class="row justify-content-center">
+    <div class="col-lg-8 border border-dark rounded justify-content-center m-4 bg-light">
+        <form class="m-3" asp-action="create" asp-controller="Main" method="POST">
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Name"><h5>Your Name:</h5></label>
+                </div>
+                <div class="col-4 justify-content-end">
+                    <input type="text" class="form-control" id="name" asp-for="Name">
+                    <p><span asp-validation-for="Name" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Location"><h5>Dojo Location:</h5></label>
+                </div>
+                <div class="col-4">
+                    <select class="custom-select" id="location" asp-for="Location">
+                        <option selected>San Jose</option>
+                        <option value="McClean">McLean</option>
+                        <option value="Dallas">Dallas</option>
+                        <option value="Seattle">Seattle</option>
+                    </select>
+                    <p><span asp-validation-for="Location" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6 ml-5">
+                    <label asp-for="Language"><h5>Favorite Language:</h5></label>
+                </div>
+                <div class="col-4">
+                    <select class="custom-select" id="langauge" asp-for="Language">
+                        <option selected>Python</option>
+                        <option value="C#">C#</option>
+                        <option value="MEAN">MEAN</option>
+                        <option value="SWIFT">Swift</option>
+                    </select>
+                    <p><span asp-validation-for="Language" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-10 ml-5">
+                    <label as-for="Comment"><h5>Comment (Optional):</h5></label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-10 ml-5 align-self-start">
+                    <textarea class="w-100" id="comment" asp-for="Comment" rows="3"></textarea>
+                    <p><span asp-validation-for="Comment" class="text-danger"></span></p>
+                </div>
+            </div>
+            <div class="form-row justify-content-end">
+                <div class="col-lg-3">
+                    <button type="submit" class="btn btn-primary text-right pl-4 pr-4">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
